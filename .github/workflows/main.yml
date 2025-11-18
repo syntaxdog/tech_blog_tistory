@@ -1,16 +1,18 @@
-
-# This is a basic workflow to help you get started with Actions
+# .github/workflows/main.yml
 
 name: Readme Update
 
+# 🚨 필수 수정: 워크플로우가 Git 저장소에 쓰기 권한을 가지도록 설정합니다.
+permissions:
+  contents: write 
+
 # Controls when the workflow will run
 on:
-# 1시간에 한번씩 아래 스크립트를 실행한다.
   schedule:
-    - cron: "0 0 * * *"
-# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+    # 매일 UTC 0시 0분에 실행 (한국 시간 기준으로는 오전 9시입니다.)
+    - cron: "0 0 * * *" 
+
 jobs:
-  # This workflow contains a single job called "build"
   build:
     runs-on: ubuntu-latest
     steps:
@@ -18,14 +20,21 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: 16
+          
       - name: Install dependencies
         run: npm ci
+        
       - name: Update README
         run: npm start
+        
       - name: Commit README
         run: |
           git add .
           git config --local user.email "kyie0913@naver.com" 
           git config --local user.name "june_kim" 
-          git commit -m "Update README.md"
+          
+          # 변경 사항이 없을 경우 Git 오류를 방지하고 "No changes to commit"을 출력합니다.
+          git commit -m "Update README.md" || echo "No changes to commit"
+          
+          # 이전에 설정한 권한(permissions) 덕분에 이 push가 성공합니다.
           git push
