@@ -9,8 +9,11 @@ permissions:
 # Controls when the workflow will run
 on:
   schedule:
-    # 매일 UTC 0시 0분에 실행 (한국 시간 기준으로는 오전 9시입니다.)
-    - cron: "0 0 * * *" 
+    - cron: "0 0 * * *"
+  
+  # 🚨 이 부분을 새로 추가해야 합니다.
+  # GitHub 웹사이트에서 'Run workflow' 버튼을 활성화합니다.
+  workflow_dispatch:
 
 jobs:
   build:
