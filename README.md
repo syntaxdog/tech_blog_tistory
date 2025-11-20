@@ -13,4 +13,4 @@
 
 ## 📕 Latest Blog Posts
 
-<a href=https://dbtree.tistory.com/68>3강. Fine-Tuning</a></br><a href=https://dbtree.tistory.com/66>2강. API 그대로 사용하기</a></br><a href=https://dbtree.tistory.com/61>1강. 자연어 처리의 기초</a></br><a href=https://dbtree.tistory.com/60>1강 딥러닝의 개념</a></br><a href=https://dbtree.tistory.com/44>One-Hot-Encoding</a></br>
+<a href=https://dbtree.tistory.com/69>4강. LoRA Fine-Tuning</a></br><a href=https://dbtree.tistory.com/68>3강. Fine-Tuning</a></br><a href=https://dbtree.tistory.com/66>2강. API 그대로 사용하기</a></br><a href=https://dbtree.tistory.com/61>1강. 자연어 처리의 기초</a></br><a href=https://dbtree.tistory.com/60>1강 딥러닝의 개념</a></br>
